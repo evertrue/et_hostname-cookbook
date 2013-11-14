@@ -23,6 +23,6 @@ Just include `hostname` in your node's `run_list`:
 
 License and Authors
 -------------------
-Authors: Ryan C. Creasey <rcreasey@blizzard.com>
-         Jeff Byrnes <thejeffbyrnes@gmail.com>
+Authors: Ryan C. Creasey <rcreasey@blizzard.com>  
+         Jeff Byrnes <thejeffbyrnes@gmail.com>  
 License: None
