@@ -19,18 +19,28 @@ t = template "/etc/hosts" do
 end
 t.run_action(:create)
 
-e = execute "Set current hostname" do
-  command "hostname #{node['fqdn']}"
-  only_if { Socket.gethostname != node['fqdn'] }
+file "/etc/hostname" do
+  content node['target_fqdn'] + "\n"
+  action :nothing
+end.run_action(:create)
+
+e = execute "Set current hostname precomp" do
+  command "hostname #{node['target_fqdn']}"
+  only_if { Socket.gethostname != node['target_fqdn'] }
   action :nothing
 end
 e.run_action(:run)
 
+execute "Set current hostname" do
+  command "hostname #{node['target_fqdn']}"
+  only_if { Socket.gethostname != node['target_fqdn'] }
+end
+
 ohai "reload_hostname" do
   plugin "hostname"
-  only_if { Socket.gethostname != node['fqdn'] }
+  only_if { Socket.gethostname != node['target_fqdn'] }
 end
 
 execute "Set permanent hostname" do
-  command "sysctl kernel.hostname=#{node['fqdn']}"
+  command "sysctl kernel.hostname=#{node['target_fqdn']}"
 end
