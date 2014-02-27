@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of hostname.
 
+## 1.0.3:
+
+* Add support for supplemental hosts entries
+* set target_domain and target_fqdn as defaults instead of node.set
+
 ## 1.0.2:
 
 * Maintain /etc/hostname file
