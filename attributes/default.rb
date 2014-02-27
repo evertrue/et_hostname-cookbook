@@ -1,3 +1,5 @@
-set['target_domain'] = "priv.evertrue.com"
-set['target_fqdn'] = "#{node.name}.#{node['target_domain']}"
+default['target_domain'] = "priv.evertrue.com"
+default['target_fqdn'] = "#{node.name}.#{node['target_domain']}"
 override['domain'] = node['target_domain']
+
+default['et_hostname']['addl_hosts_entries'] = []
