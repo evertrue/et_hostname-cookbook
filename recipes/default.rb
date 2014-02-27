@@ -38,7 +38,6 @@ end
 
 ohai "reload_hostname" do
   plugin "hostname"
-  only_if { Socket.gethostname != node['target_fqdn'] }
 end
 
 execute "Set permanent hostname" do
