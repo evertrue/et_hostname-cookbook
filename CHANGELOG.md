@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of hostname.
 
+## 1.0.4:
+
+* Stop resetting the addl_hosts_entries array to `[]` (it renders the whole functionality useless)
+
 ## 1.0.3:
 
 * Add support for supplemental hosts entries
