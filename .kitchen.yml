@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[et_hostname::default]
+    attributes:
+      et_hostname:
+        addl_hosts_entries:
+        - 1.2.3.4 test.host.local test
