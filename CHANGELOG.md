@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of hostname.
 
+## 1.1.0:
+
+* Remove Jeff's personal email address from the metadata and documentation
+* Set up Test Kitchen and add some serverspec tests
+* Handle nil addl_hosts_entries attribute value
+
 ## 1.0.4:
 
 * Stop resetting the addl_hosts_entries array to `[]` (it renders the whole functionality useless)
