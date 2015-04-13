@@ -24,5 +24,5 @@ Just include `hostname` in your node's `run_list`:
 License and Authors
 -------------------
 Authors: Ryan C. Creasey <rcreasey@blizzard.com>  
-         Jeff Byrnes <thejeffbyrnes@gmail.com>  
+         Jeff Byrnes <jeff@evertrue.com>  
 License: None
