@@ -1,6 +1,6 @@
 127.0.0.1   localhost.localdomain localhost
 <%= node.ipaddress %> <%= node['target_fqdn'] %> <%= node.name %>
 
-<% node['et_hostname']['addl_hosts_entries'].each do |host| -%>
+<% @addl_hosts_entries.each do |host| -%>
 <%= host %>
 <% end -%>
