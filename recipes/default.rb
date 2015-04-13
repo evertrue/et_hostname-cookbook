@@ -16,7 +16,8 @@ t = template "/etc/hosts" do
   mode 0644
   backup false
   action :nothing
-  variables(addl_hosts_entries: node['et_hostname']['addl_hosts_entries'] || [])
+  variables(addl_hosts_entries: node.fetch(:et_hostname, {})
+                                    .fetch(:addl_hosts_entries, []))
 end
 t.run_action(:create)
 
