@@ -21,6 +21,8 @@ Just include `hostname` in your node's `run_list`:
 }
 ```
 
+It is also recommended that you set the `node['target_domain']` attribute to a domain other than `priv.evertrue.com`.
+
 License and Authors
 -------------------
 Authors: Ryan C. Creasey <rcreasey@blizzard.com>  
