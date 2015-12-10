@@ -21,7 +21,7 @@ Just include `hostname` in your node's `run_list`:
 }
 ```
 
-It is also recommended that you set the `node['target_domain']` attribute to a domain other than `priv.evertrue.com`.
+It is also recommended that you set the `node['target_domain']` and `node['target_fqdn']` attributes to a domain other than `priv.evertrue.com`.
 
 License and Authors
 -------------------
